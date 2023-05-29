@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 html {
   height:100%;
-  background-image: linear-gradient(to right top, #441563 0%, #155263 100%);
+  background-image: linear-gradient(to right top, #dbd5df 0%, #155263 100%);
 }
 nav {
   max-width: 960px;

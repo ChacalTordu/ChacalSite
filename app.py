@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, send_from_directory
 import json
 import os
 
@@ -9,11 +9,15 @@ app = Flask(__name__)
 def ChacalAccueil():
     return render_template('chacalAccueil.html')
 
-@app.route('/ChacalEsport', methods=['GET', 'POST'])
+@app.route('/ChacalEsport')
 def ChacalEsport():
     with open('tournoi.json', 'r') as file:
         tournoi_data = json.load(file)
     return render_template('chacalEsport.html', tournoi=tournoi_data)
+
+@app.route('/js/<path:filename>')
+def serve_js(filename):
+    return send_from_directory('static/js', filename)
 
 @app.route('/ChacalNavbarre')
 def ChacalNavbarre():

@@ -2,7 +2,9 @@
     {
         "name": "Tournoi 1",
         "date": "29-05-2023",
+        "startDateTime": "2023-05-29T12:43:00",
         "location": "Lieu 1",
+        "jeu":"TFT",
         "description": "Description du tournoi...",
         "participants": [
             "Équipe 1",
