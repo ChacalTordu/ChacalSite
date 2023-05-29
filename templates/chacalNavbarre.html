@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>ChacalNavbarre</title>
+      <script src="{{ url_for('static', filename='js/squareclick.js') }}"></script>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navbarre/index.css') }}">    
+  </head>
+  <body>
+    <section class='navbarre_flexSquare'>
+      <div class="container">
+        <a href="{{ url_for('ChacalAccueil') }}">
+          <div class="square">
+            <span>Chacal accueil</span>
+          </div>
+        </a>
+        <a href="{{ url_for('ChacalEsport') }}">
+          <div class="square">
+            <span>Chacal esport</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </body>
+</html>

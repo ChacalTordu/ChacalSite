@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Tournoi 1",
+        "date": "29-05-2023",
+        "location": "Lieu 1",
+        "description": "Description du tournoi...",
+        "participants": [
+            "Équipe 1",
+            "Équipe 2",
+            "Équipe 3"
+        ],
+        "prizes": [
+            "1er prix: 1000 $",
+            "2e prix: 500 $",
+            "3e prix: 250 $"
+        ],
+        "tournamentType": "Élimination simple"
+    }
+]

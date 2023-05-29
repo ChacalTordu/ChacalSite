@@ -1,0 +1,41 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.navbarre_flexSquare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #2f1d58;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  width: 500px;
+  height: 400px;
+  margin: 50px;
+  background-color: #F7DC6F;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: filter 2.0 ease;
+}
+
+.square:hover{
+  filter: brightness(40%);
+}
+
+.square a {
+  color: white;
+  text-decoration: none;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="firefox">
+    <meta name="ChacalHome" content="width=device-width, initial-scale=1.0">
+    <title>ChacalEsport</title>
+    <script src="{{ url_for('static', filename='js/getNavbarre.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navbarre.css') }}">   
+</head>
+<body>
+    <header>
+      <div id="navbarre"></div>
+    </header>
+    <main>
+      <h1>Informations sur le tournoi</h1>
+      {% if tournoi %}
+        <p>Nom du tournoi: {{ tournoi.name }}</p>
+        <p>Date: {{ tournoi.date }}</p>
+        <p>Lieu: {{ tournoi.location }}</p>
+        <p>Description: {{ tournoi.description }}</p>
+        <h2>Participants:</h2>
+        <ul>
+        {% for participant in tournoi.participants %}
+            <li>{{ participant }}</li>
+        {% endfor %}
+        </ul>
+        <h2>Prix:</h2>
+        <ul>
+        {% for prize in tournoi.prizes %}
+            <li>{{ prize }}</li>
+        {% endfor %}
+        </ul>
+      <p>Type de tournoi: {{ tournoi.tournamentType }}</p>
+      {% else %}
+      <p>Aucune information sur le tournoi disponible.</p>
+      {% endif %}
+    </main>
+    <footer>
+      <!-- contenu du pied de page -->
+    </footer>
+  </body>
+</html>
