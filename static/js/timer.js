@@ -1,5 +1,5 @@
 // Charger le fichier JSON contenant les données du tournoi
-fetch("../tournoi.json")
+fetch("/tournoi.json")
   .then(response => response.json())
   .then(data => {
     const tournoi = data[0]; // Supposant que le fichier JSON contient un tableau avec un seul objet tournoi
