@@ -4,7 +4,7 @@ fetch("/tournoi.json")
   .then(data => {
     const tournoi = data[0]; // Supposant que le fichier JSON contient un tableau avec un seul objet tournoi
     const startDateTime = new Date(tournoi.startDateTime);
-    console.log(data);
+    // console.log(data);
     // Appeler la fonction updateTimer() pour lancer le timer
     updateTimer(startDateTime);
   })
@@ -15,6 +15,14 @@ fetch("/tournoi.json")
 function updateTimer(startDateTime) {
     const currentTime = new Date();
     const timeRemaining = startDateTime - currentTime;
+
+    // Vérifier si la date prévue est atteinte ou dépassée
+    if (timeRemaining <= 0) {
+      // Afficher le timer à 00:00:00:00
+      const timerElement = document.getElementById('timer');
+      timerElement.textContent = '00:00:00:00';
+      return; // Arrêter la fonction
+  }
 
     const seconds = Math.floor((timeRemaining / 1000) % 60);
     const minutes = Math.floor((timeRemaining / 1000 / 60) % 60);

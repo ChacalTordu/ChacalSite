@@ -1,0 +1,56 @@
+.card {
+  background-image: url("/static/images/tft.png");
+  width: 400px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.card-content {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.card-content p {
+  margin: 0;
+}
+
+.timer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.timer-label {
+  font-weight: bold;
+}
+
+.participants,
+.prizes {
+  margin-top: 20px;
+}
+
+.participants-list,
+.prizes-list {
+  padding-left: 20px;
+}
+
+.no-tournament-info {
+  text-align: center;
+  font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 10px;
+  }
+}
