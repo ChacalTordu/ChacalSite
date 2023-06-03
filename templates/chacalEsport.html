@@ -7,50 +7,59 @@
     <title>ChacalEsport</title>
     <script src="{{ url_for('static', filename='js/getNavbarre.js') }}"></script>
     <script src="{{ url_for('serve_js', filename='timer.js') }}"></script>
+    <script src="{{ url_for('serve_js', filename='card.js') }}"></script>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navbarre.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chacalEsport/tournoi.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chacalEsport/card.css') }}">     
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chacalEsport/card.css') }}">      
 </head>
 <body>
     <header>
       <div id="navbarre"></div>
     </header>
     <main>
-      <div class="card">
-        <h1>Informations sur le tournoi</h1>
-        {% if tournoi %}
+      <div class="tournoi">
+        <div class="cardAndTimer">
+          <div class="card" onclick="toggleCardInfo(this)"></div>
+          <div class="timer"><button id="timerButton" class="card-button"><span id="timer"></span></button></div>
+        </div>
+        <div class="informations hidden">
+          {% if tournoi %}
           {% for tournoi_info in tournoi %}
-            <div class="card-content">
-              <p>Nom du tournoi: {{ tournoi_info.name }}</p>
-              <p>Date: {{ tournoi_info.startDateTime }}</p>
-              <div id="timer" class="timer">
-                <p class="timer-label">Temps restant est de :</p>
-              </div>
-              <p>Lieu: {{ tournoi_info.location }}</p>
-              <p>Jeu: {{ tournoi_info.jeu }}</p>
-              <p>Description: {{ tournoi_info.description }}</p>
-              <h2>Participants:</h2>
-              <ul class="participants participants-list">
+          <div class="card-info">
+            <p>Organisé par : {{ tournoi_info.author }}</p>
+            <p>Nom du tournoi: {{ tournoi_info.name }}</p>
+            <p>Date: {{ tournoi_info.startDateTime }}</p>
+            <p>Lieu: {{ tournoi_info.location }}</p>
+            <p>Jeu: {{ tournoi_info.jeu }}</p>
+            <p>Description: {{ tournoi_info.description }}</p>
+            <p>Participants:</p>
+            <ul class="participants participants-list">
               {% for participant in tournoi_info.participants %}
-                  <li>{{ participant }}</li>
+              <li>{{ participant }}</li>
               {% endfor %}
-              </ul>
-              <h2>Prix:</h2>
-              <ul class="prizes prizes-list">
+            </ul>
+            <h2>Prix:</h2>
+            <ul class="prizes prizes-list">
               {% for prize in tournoi_info.prizes %}
-                  <li>{{ prize }}</li>
+              <li>{{ prize }}</li>
               {% endfor %}
-              </ul>
-              <p>Type de tournoi: {{ tournoi_info.tournamentType }}</p>
-            </div>
+            </ul>
+            <p>Type de tournoi: {{ tournoi_info.tournamentType }}</p>
+          </div>
           {% endfor %}
-        {% else %}
-        <p class="no-tournament-info">Aucune information sur le tournoi disponible.</p>
-        {% endif %}
+          {% else %}
+          <p class="no-tournament-info">Aucune information sur le tournoi disponible.</p>
+          {% endif %}
+        </div>
+        <div class="etatTournoi hidden">
+          <div class="etatTournoi-info">
+            Contenu de l'état du tournoi
+          </div>
+        </div>
       </div>
-    </main>
+    </main>    
     <footer>
       <!-- contenu du pied de page -->
     </footer>
-  </body>
+</body>
 </html>
