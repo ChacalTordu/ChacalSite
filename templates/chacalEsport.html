@@ -10,7 +10,8 @@
     <script src="{{ url_for('serve_js', filename='card.js') }}"></script>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navbarre.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chacalEsport/tournoi.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chacalEsport/card.css') }}">      
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chacalEsport/card.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chacalEsport/etatTournoi.css') }}">         
 </head>
 <body>
     <header>
@@ -51,9 +52,143 @@
           <p class="no-tournament-info">Aucune information sur le tournoi disponible.</p>
           {% endif %}
         </div>
-        <div class="etatTournoi hidden">
-          <div class="etatTournoi-info">
-            Contenu de l'état du tournoi
+        <div class="etatTournoi theme theme-dark hidden">
+          <div class="bracket">
+            <div class="column one">
+              <div class="match winner-top">
+                <div class="match-top team">
+                  <span class="seed">7</span>
+                  <span class="name">Gwendal</span>
+                  <span class="score">0</span>
+                </div>
+                <div class="match-bottom team">
+                  <span class="seed">1</span>
+                  <span class="name">Noé</span>
+                  <span class="score">1</span>
+                </div>
+                <div class="match-lines">
+                  <div class="line one"></div>
+                  <div class="line two"></div>
+                </div>
+              </div>
+              <div class="match winner-bottom">
+                <div class="match-top team">
+                  <span class="seed">4</span>
+                  <span class="name">Antoine</span>
+                  <span class="score">99</span>
+                </div>
+                <div class="match-bottom team">
+                  <span class="seed">0</span>
+                  <span class="name">Marius</span>
+                  <span class="score">-2</span>
+                </div>
+                <div class="match-lines">
+                  <div class="line one"></div>
+                  <div class="line two"></div>
+                </div>
+                <div class="match-lines alt">
+                  <div class="line one"></div>
+                </div>
+              </div>
+              <div class="match winner-top">
+                <div class="match-top team">
+                  <span class="seed">7</span>
+                  <span class="name">Gwendal</span>
+                  <span class="score">0</span>
+                </div>
+                <div class="match-bottom team">
+                  <span class="seed">1</span>
+                  <span class="name">Noé</span>
+                  <span class="score">1</span>
+                </div>
+                <div class="match-lines">
+                  <div class="line one"></div>
+                  <div class="line two"></div>
+                </div>
+                <div class="match-lines alt">
+                  <div class="line one"></div>
+                </div>
+              </div>
+              <div class="match winner-top">
+                <div class="match-top team">
+                  <span class="seed">7</span>
+                  <span class="name">Gwendal</span>
+                  <span class="score">0</span>
+                </div>
+                <div class="match-bottom team">
+                  <span class="seed">1</span>
+                  <span class="name">Noé</span>
+                  <span class="score">1</span>
+                </div>
+                <div class="match-lines">
+                  <div class="line one"></div>
+                  <div class="line two"></div>
+                </div>
+                <div class="match-lines alt">
+                  <div class="line one"></div>
+                </div>
+              </div>
+            </div>
+            <div class="column two">
+              <div class="match winner-top">
+                <div class="match-top team">
+                  <span class="seed">7</span>
+                  <span class="name">Gwendal</span>
+                  <span class="score">0</span>
+                </div>
+                <div class="match-bottom team">
+                  <span class="seed">1</span>
+                  <span class="name">Noé</span>
+                  <span class="score">1</span>
+                </div>
+                <div class="match-lines">
+                  <div class="line one"></div>
+                  <div class="line two"></div>
+                </div>
+                <div class="match-lines alt">
+                  <div class="line one"></div>
+                </div>
+              </div>
+              <div class="match winner-bottom">
+                <div class="match-top team">
+                  <span class="seed">7</span>
+                  <span class="name">Gwendal</span>
+                  <span class="score">0</span>
+                </div>
+                <div class="match-bottom team">
+                  <span class="seed">1</span>
+                  <span class="name">Noé</span>
+                  <span class="score">1</span>
+                </div>
+                <div class="match-lines">
+                  <div class="line one"></div>
+                  <div class="line two"></div>
+                </div>
+                <div class="match-lines alt">
+                  <div class="line one"></div>
+                </div>
+              </div>              
+            </div>
+            <div class="column three">
+              <div class="match">
+                <div class="match-top team">
+                  <span class="seed">7</span>
+                  <span class="name">Gwendal</span>
+                  <span class="score">0</span>
+                </div>
+                <div class="match-bottom team">
+                  <span class="seed">1</span>
+                  <span class="name">Noé</span>
+                  <span class="score">0</span>
+                </div>
+                <div class="match-lines">
+                  <div class="line one"></div>
+                </div>
+                <div class="match-lines alt">
+                  <div class="line one"></div>
+                </div>
+              </div>               
+            </div>
           </div>
         </div>
       </div>
