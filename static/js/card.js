@@ -1,36 +1,35 @@
-// function toggleCardInfo(card) {
-//   var cardAndTimer = card.parentElement;
-//   var informations = cardAndTimer.nextElementSibling;
-//   card.classList.toggle('active');
-//   card.classList.remove('hidden');
-
-//   if (informations.style.display === 'none') {
-//     informations.style.display = 'block';
-//     setTimeout(function () {
-//       informations.style.opacity = '1';
-//       informations.style.transform = 'translateX(0)';
-//     }, 10);
-//   } else {
-//     informations.style.opacity = '0';
-//     informations.style.transform = 'translateX(-40%)';
-//     setTimeout(function () {
-//       informations.style.display = 'none';
-//     }, 300);
-//   }
-// }
-
 function toggleCardInfo(card) {
   var cardAndTimer = card.parentElement;
   var informations = cardAndTimer.nextElementSibling;
+  var etatTournoi = document.querySelector('.etatTournoi');
+
   card.classList.toggle('active');
 
   if (informations.classList.contains('hidden')) {
+    // Si les informations sont cachées, on les affiche
     informations.classList.remove('hidden');
     informations.classList.add('visible');
+
+    // On vérifie si l'état du tournoi est affiché, si c'est le cas, on le cache
+    if (!etatTournoi.classList.contains('hidden')) {
+      etatTournoi.classList.remove('visible');
+      etatTournoi.classList.add('hidden');
+    }
   } else {
+    // Si les informations sont déjà affichées et l'état du tournoi est caché, on les cache
+    if (etatTournoi.classList.contains('hidden')) {
+      informations.classList.remove('visible');
+      informations.classList.add('hidden');
+    }
+  }
+  // On vérifie si l'état du tournoi est affiché, si c'est le cas, on cache les informations
+  if (etatTournoi.classList.contains('visible')) {
     informations.classList.remove('visible');
     informations.classList.add('hidden');
   }
 }
+
+
+
 
 

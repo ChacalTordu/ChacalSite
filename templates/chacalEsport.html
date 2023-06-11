@@ -8,6 +8,7 @@
     <script src="{{ url_for('static', filename='js/getNavbarre.js') }}"></script>
     <script src="{{ url_for('serve_js', filename='timer.js') }}"></script>
     <script src="{{ url_for('serve_js', filename='card.js') }}"></script>
+    <script src="{{ url_for('serve_js', filename='createTournament.js') }}"></script>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navbarre.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chacalEsport/tournoi.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chacalEsport/card.css') }}">
@@ -53,7 +54,8 @@
           {% endif %}
         </div>
         <div class="etatTournoi theme theme-dark hidden">
-          <div class="bracket">
+          <div class="createTournament" onclick="createTournament(this)">Créer le tournoi</div>
+          <!-- <div class="bracket">
             <div class="column one">
               <div class="match winner-top">
                 <div class="match-top team">
@@ -189,7 +191,7 @@
                 </div>
               </div>               
             </div>
-          </div>
+          </div>  -->
         </div>
       </div>
     </main>    
