@@ -1,3 +1,5 @@
+indexTeam = 0;
+
 function createTournament(button) {
   button.classList.add('hidden');
   // Charger le fichier JSON contenant les données du tournoi
@@ -21,37 +23,34 @@ function createTournamentStructure(participants) {
   const bracket = document.createElement("div");
   bracket.className = "bracket";
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < Math.log2(participants.length); i++) {
     const column = document.createElement("div");
     column.className = `column column-${i + 1}`;
     bracket.appendChild(column);
-
     const matchesInColumn = i === 0 ? numMatches : Math.pow(2, 3 - i - 1);
-
     for (let j = 0; j < matchesInColumn; j++) {
-      const match = createMatch(column, participants, i, j);
+      const match = createMatch(participants, i, j);
       column.appendChild(match);
     }
   }
-
   const createTournamentButton = document.querySelector(".createTournament");
   createTournamentButton.insertAdjacentElement("afterend", bracket);
 }
 
 // Fonction pour créer un match avec les noms des participants
-function createMatch(column, participants, columnIndex, matchIndex) {
+function createMatch(participants, columnIndex, matchIndex) {
   const match = document.createElement("div");
   match.className = "match";
 
   if (columnIndex === 0) {
     const participantIndex1 = matchIndex * 2;
     const participantIndex2 = matchIndex * 2 + 1;
-    const winnerClass = getWinnerClass(participants, participantIndex1, participantIndex2);
+    //const winnerClass = getWinnerClass(participants, participantIndex1, participantIndex2);
 
     const topTeam = createTeam(participants[participantIndex1]);
     const bottomTeam = createTeam(participants[participantIndex2]);
 
-    match.classList.add(winnerClass);
+    //match.classList.add(winnerClass);
     match.appendChild(topTeam);
     match.appendChild(bottomTeam);
   }
@@ -84,7 +83,12 @@ function createMatch(column, participants, columnIndex, matchIndex) {
 // Fonction pour créer une équipe avec le nom du participant
 function createTeam(name) {
   const team = document.createElement("div");
-  team.className = "match-top team";
+  if (indexTeam % 2 === 0) {
+    team.className = "match-top team";
+  }else{
+    team.className = "match-bottom team";
+  }
+  indexTeam = indexTeam +1;
 
   const nameSpan = document.createElement("span");
   nameSpan.className = "name";
