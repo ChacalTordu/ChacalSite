@@ -53,6 +53,12 @@ function createMatch(participants, columnIndex, matchIndex) {
     //match.classList.add(winnerClass);
     match.appendChild(topTeam);
     match.appendChild(bottomTeam);
+  }else{
+    const topTeam = createTeam("");
+    const bottomTeam = createTeam("");
+
+    match.appendChild(topTeam);
+    match.appendChild(bottomTeam);
   }
 
   const matchLines = document.createElement("div");
@@ -67,15 +73,13 @@ function createMatch(participants, columnIndex, matchIndex) {
   line2.className = "line two";
   matchLines.appendChild(line2);
 
-  if (columnIndex === 0) {
-    const matchLinesAlt = document.createElement("div");
-    matchLinesAlt.className = "match-lines alt";
-    match.appendChild(matchLinesAlt);
-
-    const altLine1 = document.createElement("div");
-    altLine1.className = "line one";
-    matchLinesAlt.appendChild(altLine1);
-  }
+  const matchLinesAlt = document.createElement("div");
+  matchLinesAlt.className = "match-lines alt";
+  match.appendChild(matchLinesAlt);
+  
+  const altLine1 = document.createElement("div");
+  altLine1.className = "line one";
+  matchLinesAlt.appendChild(altLine1);
 
   return match;
 }
