@@ -22,5 +22,5 @@ Bien que l'algorithme de création de tournois soit stable, il reste encore beau
 
 ## Contact
 
-Pour toute question, suggestion ou commentaire, n'hésitez pas à me contacter à l'adresse suivante : [chacal.entreprise@exemple.com].
+Pour toute question, suggestion ou commentaire, n'hésitez pas à me contacter à l'adresse suivante : [chacal.entreprise@gmail.com].
 
