@@ -19,17 +19,18 @@ function createTournament(button) {
 function createTournamentStructure(participants) {
   const numTeams = participants.length;
   const numMatches = numTeams / 2;
+  const numColumns = Math.ceil(Math.log2(numTeams));
 
   const bracket = document.createElement("div");
   bracket.className = "bracket";
 
-  for (let i = 0; i < Math.log2(participants.length); i++) {
+  for (let i = 0; i < numColumns; i++) {
     const column = document.createElement("div");
     column.className = `column column-${i + 1}`;
     bracket.appendChild(column);
-    const matchesInColumn = i === 0 ? numMatches : Math.pow(2, 3 - i - 1);
+    const matchesInColumn = i < numColumns - 1 ? Math.pow(2, numColumns - i - 1) : 1;
     for (let j = 0; j < matchesInColumn; j++) {
-      const match = createMatch(participants, i, j);
+      const match = createMatch(participants, i, j, numTeams);
       column.appendChild(match);
     }
   }
@@ -45,15 +46,13 @@ function createMatch(participants, columnIndex, matchIndex) {
   if (columnIndex === 0) {
     const participantIndex1 = matchIndex * 2;
     const participantIndex2 = matchIndex * 2 + 1;
-    //const winnerClass = getWinnerClass(participants, participantIndex1, participantIndex2);
 
     const topTeam = createTeam(participants[participantIndex1]);
     const bottomTeam = createTeam(participants[participantIndex2]);
 
-    //match.classList.add(winnerClass);
     match.appendChild(topTeam);
     match.appendChild(bottomTeam);
-  }else{
+  } else {
     const topTeam = createTeam("");
     const bottomTeam = createTeam("");
 
@@ -76,7 +75,7 @@ function createMatch(participants, columnIndex, matchIndex) {
   const matchLinesAlt = document.createElement("div");
   matchLinesAlt.className = "match-lines alt";
   match.appendChild(matchLinesAlt);
-  
+
   const altLine1 = document.createElement("div");
   altLine1.className = "line one";
   matchLinesAlt.appendChild(altLine1);
@@ -89,10 +88,10 @@ function createTeam(name) {
   const team = document.createElement("div");
   if (indexTeam % 2 === 0) {
     team.className = "match-top team";
-  }else{
+  } else {
     team.className = "match-bottom team";
   }
-  indexTeam = indexTeam +1;
+  indexTeam = indexTeam + 1;
 
   const nameSpan = document.createElement("span");
   nameSpan.className = "name";
@@ -100,12 +99,4 @@ function createTeam(name) {
   team.appendChild(nameSpan);
 
   return team;
-}
-
-// Fonction pour obtenir la classe du gagnant du match
-function getWinnerClass(participants, index1, index2) {
-  const score1 = participants[index1].score || 0;
-  const score2 = participants[index2].score || 0;
-
-  return score1 > score2 ? "winner-top" : "winner-bottom";
 }
