@@ -6,38 +6,197 @@
     <meta name="ChacalHome" content="width=device-width, initial-scale=1.0">
     <title>ChacalEsport</title>
     <script src="{{ url_for('static', filename='js/getNavbarre.js') }}"></script>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navbarre.css') }}">   
+    <script src="{{ url_for('serve_js', filename='timer.js') }}"></script>
+    <script src="{{ url_for('serve_js', filename='card.js') }}"></script>
+    <script src="{{ url_for('serve_js', filename='createTournament.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navbarre.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chacalEsport/tournoi.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chacalEsport/card.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chacalEsport/etatTournoi.css') }}">         
 </head>
 <body>
     <header>
       <div id="navbarre"></div>
     </header>
     <main>
-      <h1>Informations sur le tournoi</h1>
-      {% if tournoi %}
-        <p>Nom du tournoi: {{ tournoi.name }}</p>
-        <p>Date: {{ tournoi.date }}</p>
-        <p>Lieu: {{ tournoi.location }}</p>
-        <p>Description: {{ tournoi.description }}</p>
-        <h2>Participants:</h2>
-        <ul>
-        {% for participant in tournoi.participants %}
-            <li>{{ participant }}</li>
-        {% endfor %}
-        </ul>
-        <h2>Prix:</h2>
-        <ul>
-        {% for prize in tournoi.prizes %}
-            <li>{{ prize }}</li>
-        {% endfor %}
-        </ul>
-      <p>Type de tournoi: {{ tournoi.tournamentType }}</p>
-      {% else %}
-      <p>Aucune information sur le tournoi disponible.</p>
-      {% endif %}
-    </main>
+      <div class="tournoi">
+        <div class="cardAndTimer">
+          <div class="card" onclick="toggleCardInfo(this)"></div>
+          <div class="timer"><button id="timerButton" class="card-button"><span id="timer"></span></button></div>
+        </div>
+        <div class="informations hidden">
+          {% if tournoi %}
+          {% for tournoi_info in tournoi %}
+          <div class="card-info">
+            <p>Organisé par : {{ tournoi_info.author }}</p>
+            <p>Nom du tournoi: {{ tournoi_info.name }}</p>
+            <p>Date: {{ tournoi_info.startDateTime }}</p>
+            <p>Lieu: {{ tournoi_info.location }}</p>
+            <p>Jeu: {{ tournoi_info.jeu }}</p>
+            <p>Description: {{ tournoi_info.description }}</p>
+            <p>Participants:</p>
+            <ul class="participants participants-list">
+              {% for participant in tournoi_info.participants %}
+              <li>{{ participant }}</li>
+              {% endfor %}
+            </ul>
+            <h2>Prix:</h2>
+            <ul class="prizes prizes-list">
+              {% for prize in tournoi_info.prizes %}
+              <li>{{ prize }}</li>
+              {% endfor %}
+            </ul>
+            <p>Type de tournoi: {{ tournoi_info.tournamentType }}</p>
+          </div>
+          {% endfor %}
+          {% else %}
+          <p class="no-tournament-info">Aucune information sur le tournoi disponible.</p>
+          {% endif %}
+        </div>
+        <div class="etatTournoi theme theme-dark hidden">
+          <div class="createTournament" onclick="createTournament(this)">Créer le tournoi</div>
+          <!-- <div class="bracket">
+            <div class="column one">
+              <div class="match winner-top">
+                <div class="match-top team">
+                  <span class="seed">7</span>
+                  <span class="name">Equipe 1</span>
+                  <span class="score">0</span>
+                </div>
+                <div class="match-bottom team">
+                  <span class="seed">1</span>
+                  <span class="name">Equipe 2</span>
+                  <span class="score">1</span>
+                </div>
+                <div class="match-lines">
+                  <div class="line one"></div>
+                  <div class="line two"></div>
+                </div>
+              </div>
+              <div class="match winner-bottom">
+                <div class="match-top team">
+                  <span class="seed">4</span>
+                  <span class="name">Equipe 3</span>
+                  <span class="score">99</span>
+                </div>
+                <div class="match-bottom team">
+                  <span class="seed">0</span>
+                  <span class="name">Equipe 4</span>
+                  <span class="score">-2</span>
+                </div>
+                <div class="match-lines">
+                  <div class="line one"></div>
+                  <div class="line two"></div>
+                </div>
+                <div class="match-lines alt">
+                  <div class="line one"></div>
+                </div>
+              </div>
+              <div class="match winner-top">
+                <div class="match-top team">
+                  <span class="seed">7</span>
+                  <span class="name">Equipe 5</span>
+                  <span class="score">0</span>
+                </div>
+                <div class="match-bottom team">
+                  <span class="seed">1</span>
+                  <span class="name">Equipe 6</span>
+                  <span class="score">1</span>
+                </div>
+                <div class="match-lines">
+                  <div class="line one"></div>
+                  <div class="line two"></div>
+                </div>
+                <div class="match-lines alt">
+                  <div class="line one"></div>
+                </div>
+              </div>
+              <div class="match winner-top">
+                <div class="match-top team">
+                  <span class="seed">7</span>
+                  <span class="name">Equipe 7</span>
+                  <span class="score">0</span>
+                </div>
+                <div class="match-bottom team">
+                  <span class="seed">1</span>
+                  <span class="name">Equipe 8</span>
+                  <span class="score">1</span>
+                </div>
+                <div class="match-lines">
+                  <div class="line one"></div>
+                  <div class="line two"></div>
+                </div>
+                <div class="match-lines alt">
+                  <div class="line one"></div>
+                </div>
+              </div>
+            </div>
+            <div class="column two">
+              <div class="match">
+                <div class="match-top team">
+                  <span class="seed"></span>
+                  <span class="name"></span>
+                  <span class="score"></span>
+                </div>
+                <div class="match-bottom team">
+                  <span class="seed"></span>
+                  <span class="name"></span>
+                  <span class="score"></span>
+                </div>
+                <div class="match-lines">
+                  <div class="line one"></div>
+                  <div class="line two"></div>
+                </div>
+                <div class="match-lines alt">
+                  <div class="line one"></div>
+                </div>
+              </div>
+              <div class="match">
+                <div class="match-top team">
+                  <span class="seed"></span>
+                  <span class="name"></span>
+                  <span class="score"></span>
+                </div>
+                <div class="match-bottom team">
+                  <span class="seed"></span>
+                  <span class="name"></span>
+                  <span class="score"></span>
+                </div>
+                <div class="match-lines">
+                  <div class="line one"></div>
+                  <div class="line two"></div>
+                </div>
+                <div class="match-lines alt">
+                  <div class="line one"></div>
+                </div>
+              </div>              
+            </div>
+            <div class="column three">
+              <div class="match">
+                <div class="match-top team">
+                  <span class="seed"></span>
+                  <span class="name"></span>
+                  <span class="score"></span>
+                </div>
+                <div class="match-bottom team">
+                  <span class="seed"></span>
+                  <span class="name"></span>
+                  <span class="score"></span>
+                </div>
+                <div class="match-lines">
+                  <div class="line one"></div>
+                </div>
+                <div class="match-lines alt">
+                  <div class="line one"></div>
+                </div>
+              </div>               
+            </div>
+          </div>  -->
+        </div>
+      </div>
+    </main>    
     <footer>
       <!-- contenu du pied de page -->
     </footer>
-  </body>
+</body>
 </html>
