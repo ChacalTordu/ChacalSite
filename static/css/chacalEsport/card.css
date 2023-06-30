@@ -1,9 +1,7 @@
 .tournoi{
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   flex-direction: row;
-  width: 80%;
+  width: 95%;
   justify-content: center;
 }
 
