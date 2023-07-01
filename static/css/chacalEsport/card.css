@@ -43,6 +43,10 @@
   width: 80%;
 }
 
+.card-button:hover{
+  cursor: pointer;
+}
+
 .timer{
   display: flex;
   justify-content: center;
