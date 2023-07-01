@@ -1,17 +1,19 @@
 .tournoi{
+  margin: auto;
   display: flex;
   flex-direction: row;
   width: 95%;
   justify-content: center;
 }
 
-.cardAndTimer{
+
+.tournoi .cardAndTimer{
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.card {
+.tournoi .card {
   z-index: 1;
   background-image: url("/static/images/tft.png");
   background-size: cover;
@@ -31,11 +33,11 @@
   position: relative;
 }
 
-.card:hover{
+.tournoi  .card:hover{
   cursor: pointer;
 }
 
-.card-button {
+.tournoi .card-button {
   background-color: rgba(0, 0, 0, 0.5);
   border: 0px solid gray;
   border-radius: 5px;
@@ -43,31 +45,31 @@
   width: 80%;
 }
 
-.card-button:hover{
+.tournoi .card-button:hover{
   cursor: pointer;
 }
 
-.timer{
+.tournoi .timer{
   display: flex;
   justify-content: center;
   margin-top: 10px;
 }
 
-#timer{
+.tournoi #timer{
   color: white;
   font-size: 20px !important;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#timerButton {
+.tournoi #timerButton {
   position: relative;
 }
 
-.hidden {
+.tournoi .hidden {
   display: none;
 }
 
-.visible {
+.tournoi .visible {
   background-color: rgba(53, 52, 50, 0.63);
   display: block;
   width: 60%;
@@ -78,12 +80,12 @@
   box-shadow: 7px 0 10px rgba(54, 54, 54, 0.7); 
 }
 
-.no-tournament-info {
+.tournoi .no-tournament-info {
   font-style: italic;
   color: gray;
 }
 
-.card-info, .etatTournoi-info{
+.tournoi .card-info, .etatTournoi-info{
   margin-left: 40px;
   margin-right: 20px;
   color: rgba(255, 255, 255, 0.8);
