@@ -1,6 +1,6 @@
 .container {
   margin: auto;
-  width: 350px;
+  width: 1500px;
   height: 500px;
   position: relative;
   perspective: 3500px;
@@ -17,7 +17,7 @@
 .item {
   display: block;
   position: absolute;
-  background: #fff;
+  /* background: #fff; */
   width: 304px;
   height: 500px;
   font-size:13px;
@@ -50,7 +50,6 @@
 
 .h {
   transform: rotateY(315deg) translateZ(366px);
-  background: #fff;
 }
 
 .next, .prev {
