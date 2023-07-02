@@ -1,6 +1,6 @@
 # ChacalSite
 
-Projet ChacalSite - Version 0.0.1
+Projet ChacalSite - Version 0.1
 
 ## A propos
 
