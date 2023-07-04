@@ -1,9 +1,10 @@
-var carousel = $(".carousel");
-var currdeg = 0;
-var num = 1;
+$(document).ready(function() {
+  var carousel = $(".carousel");
+  var currdeg = 0;
+  var num = 1;
 
-$(".next").on("click", { d: "n" }, rotate);
-$(".prev").on("click", { d: "p" }, rotate);
+  $(".next").on("click", { d: "n" }, rotate);
+  $(".prev").on("click", { d: "p" }, rotate);
 
 function rotate(e) {
   if (e.data.d == "n") {
@@ -33,3 +34,4 @@ function rotate(e) {
     "transform": "rotateY(" + currdeg + "deg)"
   });
 }
+});
