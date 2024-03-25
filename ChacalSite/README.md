@@ -1,29 +1,12 @@
 # ChacalSite
 
-This template should help get you started developing with Vue 3 in Vite.
+Projet ChacalSite - Version 0.0.0
 
-## Recommended IDE Setup
+## A propos
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Le Chacal Site vise à faciliter la visualisation de tournois. Deux types de tournoi seront disponible. Les tournois multigaming, et les tournois "mono" gaming.
 
-## Customize configuration
+## Contact
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Pour toute question, suggestion ou commentaire, n'hésitez pas à me contacter à l'adresse suivante : [chacal.entreprise@gmail.com].
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
