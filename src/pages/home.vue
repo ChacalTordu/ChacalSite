@@ -15,9 +15,9 @@
             et remportera la mise ? Que les jeux et les paris commencent !
             🎮🏆💰
           </h3>
-          <button class="button-primary">
-            <div class="chacal-joueurs">Chacal Joueurs</div>
-          </button>
+          <router-link class="router-link" to="/players">
+            <BlackButton textButton="Chacal Joueurs"/>
+          </router-link>
         </div>
         <div class="right-pane" />
       </div>
@@ -27,8 +27,9 @@
 </template>
 
 <script setup>
-  import ZoneNavbar from "../components/zone/ZoneNavbar.vue";
-  import ZoneFooter from "../components/zone/ZoneFooter.vue";
+  import ZoneNavbar from "../components/zone/zoneNavbar.vue";
+  import ZoneFooter from "../components/zone/zoneFooter.vue";
+  import BlackButton from "../components/buttons/buttonBlack.vue"
 </script>
 
 <style scoped>
@@ -51,33 +52,8 @@
     font-family: inherit;
     z-index: unset;
   }
-  .chacal-joueurs {
-    flex: 1;
-    position: relative;
-    font-size: var(--font-size-lg);
-    font-family: var(--font-roboto);
-    color: var(--color-whitesmoke);
-    text-align: center;
-    z-index: unset;
-  }
-  .button-primary {
-    cursor: pointer;
-    border: none;
-    padding: 19.5px var(--padding-5xl);
-    background-color: var(--color-black);
-    width: 200px;
-    border-radius: var(--br-8xs);
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    white-space: nowrap;
-    z-index: unset;
-  }
-  .button-primary:hover {
-    background-color: var(--color-darkslategray);
+  .router-link {
+    text-decoration: none;
   }
   .left-pane {
     flex: 1;
