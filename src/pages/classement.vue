@@ -1,21 +1,13 @@
 <template>
     <div class="esporttournoi-desktop">
-      <!-- Chargement de la barre de navigation depuis un composant -->
       <ZoneNavbar />
-  
-      <!-- Section principale du blog -->
       <div class="blog-section">
-        <!-- Contenu de la section -->
         <div class="content">
-          <!-- En-tête de la section -->
           <div class="pane-top">
             <div class="title">Chacal Ligue</div>
           </div>
-  
-          <!-- Contenu principal du classement -->
           <div class="pane-bottom">
             <div class="classement">
-              <!-- Colonne du rang -->
               <div class="rank">
                 <div class="div">1</div>
                 <div class="div">2</div>
@@ -25,7 +17,6 @@
                 <div class="div">6</div>
               </div>
   
-              <!-- Colonne des noms des joueurs -->
               <div class="chacaltordu-parent">
                 <div class="div">ChacalTordu</div>
                 <div class="div">Transpalet</div>
@@ -35,7 +26,6 @@
                 <div class="div">Pierromax</div>
               </div>
   
-              <!-- Colonne des points -->
               <div class="pts-parent">
                 <div class="div">+0pts</div>
                 <div class="div">+0pts</div>
@@ -46,8 +36,6 @@
               </div>
             </div>
           </div>
-  
-          <!-- Bouton pour la nouvelle session gaming avec lien -->
           <router-link to="./nouvelleSession" class="button-primary button">
             <div class="nouvelle-session-gaming">Nouvelle session gaming</div>
           </router-link>
