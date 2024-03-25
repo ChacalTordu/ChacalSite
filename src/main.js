@@ -6,6 +6,7 @@ import * as VueRouter from 'vue-router';
 
 import Home from './pages/home.vue';
 import Players from './pages/players.vue';
+import Ranking from './pages/ranking.vue';
 
 const router = VueRouter.createRouter({
 history: VueRouter.createWebHistory(),
@@ -19,6 +20,11 @@ routes: [
     path: '/players',
     name: 'Players',
     component: Players
+    },
+    {
+    path: '/ranking',
+    name: 'Ranking',
+    component: Ranking
     }
   ]
 })

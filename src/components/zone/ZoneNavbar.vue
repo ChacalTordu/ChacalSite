@@ -3,7 +3,7 @@
         <h2 class="title">Chacal site</h2>
         <nav class="navbarItem">
             <h3 class="item"><router-link to="/" class="router-link">HOME</router-link></h3>
-            <h3 class="item"><router-link to="" class="router-link">E-SPORT</router-link></h3>
+            <h3 class="item"><router-link to="/ranking" class="router-link">RANKING</router-link></h3>
             <h3 class="item"><router-link to="" class="router-link">USER</router-link></h3>
         </nav>
     </header>
