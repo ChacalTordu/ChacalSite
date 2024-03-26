@@ -4,16 +4,19 @@
     <section class="content">
       <div class="content1">
         <div class="left-pane">
-          <h1 class="title">La Chacal Ligue</h1>
+          <h1 class="title">Le Chacal Site</h1>
           <h3 class="subtitle">
-            Bienvenue dans la Chacal Ligue, où six potes s'affrontent pour le
-            titre de joueur suprême à travers une variété de jeux. Dans cette
-            compétition décontractée mais intense, l'amitié est mise à l'épreuve
-            non seulement par les jeux, mais aussi par les paris sur les
-            performances des autres joueurs. Une aventure multigaming où
-            l'excitation des paris s'ajoute à l'enjeu. Qui décrochera le titre
-            et remportera la mise ? Que les jeux et les paris commencent !
-            🎮🏆💰
+            Bienvenue sur le Chacal Site, une plateforme pour organiser et participer à des événements e-sport entre amis !
+            <br><br>Notre mission est de simplifier la visualisation et la création d'événements compétitifs, qu'il s'agisse de ligues prolongées ou de tournois simple.
+            Que vous soyez un passionné de jeux multigaming ou un fervent adepte d'un jeu en particulier, notre plateforme offre une variété d'options pour répondre à vos besoins. 
+            <br>Chaque utilisateur peut créer des événements et fixer les règles selon ses préférences.
+            <br><br>Les ligues vous permettent de vous mesurer à d'autres joueurs sur une période prolongée, avec à la clé le titre de champion. 
+            Pendant ce temps, nos tournois offrent des défis intenses sur une durée plus courte, pour les compétiteurs en quête de victoire rapide.
+            <br><br>L'une des caractéristiques uniques de notre site est la possibilité de parier sur les matchs de ligues, ajoutant une dimension supplémentaire et de compétition pour ceux qui ne sont pas directement impliqués dans le jeu.
+            <br><br>Vous cherchez à ajouter un jeu à notre liste déjà diversifiée ? Pas de problème ! 
+            Chaque membre a la possibilité de proposer de nouveaux jeux, enrichissant ainsi notre catalogue pour une expérience encore plus variée.
+            Quel que soit le format que vous préférez, que ce soit les brackets "classiques" ou les brackets "tableau", nous avons ce qu'il vous faut.
+            <br><br>Rejoignez-nous dès aujourd'hui et plongez dans le monde passionnant de l'e-sport sur le Chacal Site, où la compétition rencontre la convivialité grâce à une interface développée par ChacalTordu.
           </h3>
           <router-link class="router-link" to="/">
             <BlackButton textButton="Événements"/>
