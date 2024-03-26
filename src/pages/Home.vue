@@ -15,11 +15,11 @@
             et remportera la mise ? Que les jeux et les paris commencent !
             🎮🏆💰
           </h3>
-          <router-link class="router-link" to="/players">
-            <BlackButton textButton="Chacal Joueurs"/>
+          <router-link class="router-link" to="/">
+            <BlackButton textButton="Événements"/>
           </router-link>
         </div>
-        <div class="right-pane" />
+        <div class="right-pane"></div>
       </div>
     </section>
     <ZoneFooter />

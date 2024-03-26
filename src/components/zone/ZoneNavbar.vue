@@ -2,8 +2,9 @@
     <header class="navbar">
         <h2 class="title">Chacal site</h2>
         <nav class="navbarItem">
-            <h3 class="item"><router-link to="/" class="router-link">HOME</router-link></h3>
-            <h3 class="item"><router-link to="/ranking" class="router-link">RANKING</router-link></h3>
+            <h3 class="item"><router-link to="/" class="router-link">ACCUEIL</router-link></h3>
+            <h3 class="item"><router-link to="/" class="router-link">ÉVÉNEMENTS</router-link></h3>
+            <h3 class="item"><router-link to="/" class="router-link">COMPTE</router-link></h3>
         </nav>
     </header>
 </template>
