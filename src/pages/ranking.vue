@@ -15,7 +15,7 @@
             <ZonePlayerRanking rank="5" pseudo="Pierre" points="0"/>
           </div>
         </div>
-        <ButtonBlack textButton="Nouvelle session gaming"/>
+        <router-link to="/bracket"><ButtonBlack textButton="Voir Bracket"/></router-link>
       </section>
     </main>
     <ZoneFooter />

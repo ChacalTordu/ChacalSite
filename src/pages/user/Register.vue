@@ -1,25 +1,11 @@
 <template>
-    <!-- Conteneur principal de la page -->
     <div class="register-desktop">
-        
-        <!-- Script pour charger et insérer la barre de navigation -->
-        <script>
-            fetch('/components/navbar.html')
-                .then(response => response.text())
-                .then(html => {
-                    document.body.insertAdjacentHTML('afterbegin', html);
-                });
-        </script>
-
-        <!-- Section d'enregistrement -->
+      <ZoneNavbar />
         <div class="register-section">
             <div class="content">
-                <!-- Panneau gauche avec le formulaire d'enregistrement -->
                 <div class="left-pane">
                     <div class="form">
                         <a class="already-an-have">Already have an account? Sign in</a>
-
-                        <!-- Contenu du formulaire -->
                         <div class="form-content">
                             <div class="form-group">
                                 <div class="label">E-mail</div>
@@ -47,24 +33,19 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Panneau droit avec l'image ou le contenu multimédia -->
                 <div class="right-pane">
                     <div class="media"></div>
                 </div>
             </div>
         </div>
-
-        <!-- Script pour charger et insérer le pied de page -->
-        <script>
-            fetch('/components/footer.html')
-                .then(response => response.text())
-                .then(html => {
-                    document.body.insertAdjacentHTML('beforeend', html);
-                });
-        </script>
+        <ZoneFooter />
     </div>
 </template>
+
+<script setup>
+  import ZoneNavbar from '@/components/zone/ZoneNavbar.vue';
+  import ZoneFooter from '@/components/zone/ZoneFooter.vue';
+</script>
 
 <style scoped>
 .chacalsite {

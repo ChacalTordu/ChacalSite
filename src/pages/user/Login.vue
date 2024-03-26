@@ -1,20 +1,12 @@
 <template>
     <div class="login-desktop">
-      <script>
-        fetch('/components/navbar.html')
-            .then(response => response.text())
-            .then(html => {
-                document.body.insertAdjacentHTML('afterbegin', html);
-            });
-      </script>
+      <ZoneNavbar />
       <div class="login-section">
         <div class="content">
           <div class="left-pane">
             <div class="form">
-              <a class="tu-nas-pas-container"
-                >Tu n’as pas de compte?
-                <span class="senregistrer">S’enregistrer</span>
-              </a>
+              Tu n’as pas de compte?
+                <p><router-link to="/login" class="router-link">S’enregistrer</router-link></p>
               <div class="form-content">
                 <div class="form-group">
                   <div class="label">E-mail</div>
@@ -40,16 +32,14 @@
           </div>
         </div>
       </div>
-        <!-- Script pour charger et ajouter le footer -->
-        <script>
-          fetch('/components/footer.html')
-              .then(response => response.text())
-              .then(html => {
-                  document.body.insertAdjacentHTML('beforeend', html);
-              });
-        </script>
+      <ZoneFooter />
     </div>
 </template>
+
+<script setup>
+  import ZoneNavbar from '@/components/zone/ZoneNavbar.vue';
+  import ZoneFooter from '@/components/zone/ZoneFooter.vue';
+</script>
 
 <style scoped>
 .chacalsite {

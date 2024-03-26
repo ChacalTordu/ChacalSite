@@ -1,12 +1,6 @@
 <template>
     <div class="esportnouvellesession-table-">
-        <script>
-            fetch('/components/navbar.html')
-                .then(response => response.text())
-                .then(html => {
-                    document.body.insertAdjacentHTML('afterbegin', html);
-                });
-        </script>
+      <ZoneNavbar/>
       <div class="blog-section">
         <div class="pane-top">
           <div class="title">Chacal Ligue - Nouvelle session Gaming</div>
@@ -248,16 +242,14 @@
           </div>
         </div>
       </div>
-        <!-- Script pour charger et ajouter le footer -->
-        <script>
-          fetch('/components/footer.html')
-              .then(response => response.text())
-              .then(html => {
-                  document.body.insertAdjacentHTML('beforeend', html);
-              });
-        </script>
+      <ZoneFooter/>
     </div>
 </template>
+
+<script setup>
+  import ZoneNavbar from '@/components/zone/ZoneNavbar.vue';
+  import ZoneFooter from '@/components/zone/ZoneFooter.vue';
+</script>
 
 <style scoped>
 .chacalsite,

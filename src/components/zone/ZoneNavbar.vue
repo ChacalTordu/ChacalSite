@@ -4,7 +4,6 @@
         <nav class="navbarItem">
             <h3 class="item"><router-link to="/" class="router-link">HOME</router-link></h3>
             <h3 class="item"><router-link to="/ranking" class="router-link">RANKING</router-link></h3>
-            <h3 class="item"><router-link to="/newSession" class="router-link">NEW SESSION</router-link></h3>
         </nav>
     </header>
 </template>
