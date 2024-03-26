@@ -13,16 +13,9 @@
 <style scoped>
 .player {
     width: 390px;
-    margin: 0 !important;
-    position: absolute;
-    top: 138px;
-    left: 0px;
-    overflow: hidden;
-    flex-shrink: 0;
+    height: 550px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
     padding: var(--padding-2xs) var(--padding-3xs);
     box-sizing: border-box;
     gap: var(--gap-xl);

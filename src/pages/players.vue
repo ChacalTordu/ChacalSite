@@ -2,7 +2,7 @@
 <div class="esportjoueurs-desktop">
   <ZoneNavbar />
   <main class="blog-section">
-    <h1 class="title">Chacal Ligue - Joueurs</h1>
+    <h1 class="title">Chacal Joueurs</h1>
     <section class="joueurs-parent">
       <div class="joueurs">
         <zonePlayerPresentation 
@@ -10,27 +10,27 @@
           description=" Homme très dangereux. Capable de l’impossibe, comme du pire. Son
                         style de jeu peut surprendre ..." 
           name="Tonio Le Connard"/>
-          <zonePlayerPresentation 
+        <zonePlayerPresentation 
           media="" 
           description=" Savant, sage, aucun défis ne lui fait perdre son sang froid. A
                         surveiller ..." 
           name="Transpalet"/>
-          <zonePlayerPresentation 
+        <zonePlayerPresentation 
           media="" 
           description=" Sa capacité à être dérangé, peut aussi déranger toute la ligue.
                         Très fort ce pugzin ..." 
           name="Pugzindecong"/>
-          <zonePlayerPresentation 
+        <zonePlayerPresentation 
           media="" 
           description=" Ce spécialiste de la défonce, peut défoncer les adversaires en un
-                        claquement de petard ..." 
+                        claquement de pétard ..." 
           name="Pierromax"/>
-          <zonePlayerPresentation 
+        <zonePlayerPresentation 
           media="" 
           description=" Le chacal est capable de grande ruse, attention aux chacals coup
                         dans le dos ..." 
           name="ChacalTordu"/>
-          <zonePlayerPresentation 
+        <zonePlayerPresentation 
           media="" 
           description=" Ce spécialiste de la maîtrise du corp humain, maîtrise tout aussi
                         bien l’art du jeu vidéo ... Incroyable" 
