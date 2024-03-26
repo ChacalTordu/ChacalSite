@@ -17,9 +17,9 @@
 </template>
 
 <script setup>
-  import ZoneNavbar from '../components/zone/zoneNavbar.vue';
-  import ZoneFooter from '../components/zone/zoneFooter.vue';
-  import ButtonBlack from '../components/buttons/buttonBlack.vue';
+  import ZoneNavbar from '@/components/zone/ZoneNavbar.vue';
+  import ZoneFooter from '@/components/zone/ZoneFooter.vue';
+  import ButtonBlack from '@/components/buttons/ButtonBlack.vue';
 
   function startButtonClick() {
     // Liste des noms de fichiers d'images dans le dossier ./img

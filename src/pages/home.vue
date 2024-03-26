@@ -27,9 +27,9 @@
 </template>
 
 <script setup>
-  import ZoneNavbar from "../components/zone/zoneNavbar.vue";
-  import ZoneFooter from "../components/zone/zoneFooter.vue";
-  import BlackButton from "../components/buttons/buttonBlack.vue"
+  import ZoneNavbar from "@/components/zone/ZoneNavbar.vue";
+  import ZoneFooter from "@/components/zone/ZoneFooter.vue";
+  import BlackButton from "@/components/buttons/ButtonBlack.vue"
 </script>
 
 <style scoped>

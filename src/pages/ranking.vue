@@ -23,10 +23,10 @@
 </template>
 
 <script setup>
-  import ZoneNavbar from "../components/zone/zoneNavbar.vue";
-  import ZoneFooter from "../components/zone/zoneFooter.vue";
-  import ButtonBlack from "../components/buttons/buttonBlack.vue";
-  import ZonePlayerRanking from "../components/zone/zonePlayerRanking.vue";
+  import ZoneNavbar from "@/components/zone/ZoneNavbar.vue";
+  import ZoneFooter from "@/components/zone/ZoneFooter.vue";
+  import ButtonBlack from "@/components/buttons/ButtonBlack.vue";
+  import ZonePlayerRanking from "@/components/zone/ZonePlayerRanking.vue";
 </script>
 
 <style scoped>

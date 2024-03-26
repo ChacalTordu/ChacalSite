@@ -4,10 +4,10 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import * as VueRouter from 'vue-router';
 
-import Home from './pages/home.vue';
-import Players from './pages/players.vue';
-import Ranking from './pages/ranking.vue';
-import NewSession from './pages/newSession.vue';
+import Home from './pages/Home.vue';
+import Players from './pages/Players.vue';
+import Ranking from './pages/Ranking.vue';
+import NewSession from './pages/NewSession.vue';
 
 const router = VueRouter.createRouter({
 history: VueRouter.createWebHistory(),
