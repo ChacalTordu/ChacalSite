@@ -5,7 +5,7 @@ import App from './App.vue';
 import * as VueRouter from 'vue-router';
 
 import Home from './pages/Home.vue';
-import Players from './pages/Players.vue';
+import Events from './pages/Events.vue';
 import Ranking from './pages/Ranking.vue';
 import NewSession from './pages/NewSession.vue';
 import LogIn from '@/pages/user/Login.vue';
@@ -21,9 +21,9 @@ routes: [
       component: Home
     },
     {
-      path: '/players',
-      name: 'Players',
-      component: Players
+      path: '/events',
+      name: 'Events',
+      component: Events
     },
     {
       path: '/ranking',

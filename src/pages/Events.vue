@@ -1,40 +1,11 @@
 <template>
-<div class="esportjoueurs-desktop">
+<div class="events-desktop">
   <ZoneNavbar />
   <main class="blog-section">
-    <h1 class="title">Chacal Joueurs</h1>
+    <h1 class="title">Événements</h1>
     <section class="joueurs-parent">
-      <div class="joueurs">
-        <zonePlayerPresentation 
-          media="" 
-          description=" Homme très dangereux. Capable de l’impossibe, comme du pire. Son
-                        style de jeu peut surprendre ..." 
-          name="Tonio Le Connard"/>
-        <zonePlayerPresentation 
-          media="" 
-          description=" Savant, sage, aucun défis ne lui fait perdre son sang froid. A
-                        surveiller ..." 
-          name="Transpalet"/>
-        <zonePlayerPresentation 
-          media="" 
-          description=" Sa capacité à être dérangé, peut aussi déranger toute la ligue.
-                        Très fort ce pugzin ..." 
-          name="Pugzindecong"/>
-        <zonePlayerPresentation 
-          media="" 
-          description=" Ce spécialiste de la défonce, peut défoncer les adversaires en un
-                        claquement de pétard ..." 
-          name="Pierromax"/>
-        <zonePlayerPresentation 
-          media="" 
-          description=" Le chacal est capable de grande ruse, attention aux chacals coup
-                        dans le dos ..." 
-          name="ChacalTordu"/>
-        <zonePlayerPresentation 
-          media="" 
-          description=" Ce spécialiste de la maîtrise du corp humain, maîtrise tout aussi
-                        bien l’art du jeu vidéo ... Incroyable" 
-          name="Wazzakunga"/>
+      <div class="events">
+        <CardEvent media="" title="Chacal Ligue" type="Multigaming" date="26/03/2024" location="ChacalDiscord" participantsNb="6"/>
       </div>
       <div class="footer-instance">
         <router-link class="router-link" to="/"><ButtonBlack textButton="Classement"/></router-link>
@@ -49,10 +20,21 @@
   import ZoneNavbar from "@/components/zone/ZoneNavbar.vue";
   import ZoneFooter from "@/components/zone/ZoneFooter.vue";
   import ButtonBlack from "@/components/buttons/ButtonBlack.vue";
-  import zonePlayerPresentation from "@/components/zone/ZonePlayerPresentation.vue";
+  import CardEvent from '@/components/CardEvent.vue';
 </script>
 
 <style scoped>
+  .events-desktop {
+    width: 100%;
+    position: relative;
+    background-color: var(--color-white);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    letter-spacing: normal;
+  }
   .title {
     margin: 0;
     width: 1260px;
@@ -63,9 +45,8 @@
     display: inline-block;
     max-width: 100%;
   }
-  .joueurs {
+  .events {
     align-self: stretch;
-    height: 1376px;
     overflow: hidden;
     flex-shrink: 0;
     display: flex;
@@ -118,17 +99,6 @@
     font-size: var(--font-size-37xl);
     color: var(--color-black);
     font-family: var(--font-roboto);
-  }
-  .esportjoueurs-desktop {
-    width: 100%;
-    position: relative;
-    background-color: var(--color-white);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    letter-spacing: normal;
   }
 
   @media screen and (max-width: 1325px) {

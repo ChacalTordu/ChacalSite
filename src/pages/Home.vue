@@ -15,7 +15,7 @@
             et remportera la mise ? Que les jeux et les paris commencent !
             🎮🏆💰
           </h3>
-          <router-link class="router-link" to="/">
+          <router-link class="router-link" to="/events">
             <BlackButton textButton="Événements"/>
           </router-link>
         </div>

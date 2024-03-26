@@ -25,7 +25,7 @@ body {
   --color-white: #fff;
   --color-whitesmoke: #f2f2f2;
   --color-black: #000;
-  --color-darkslategray: #333;
+  --darkslategraycolor: #333;
 
   /* Gaps */
   --gap-31xl: 50px;
@@ -61,4 +61,48 @@ body {
   --br-8xs: 5px;
   --br-xs: 12px;
   --br-5xs: 8px;
+
+  /* A0 */
+  --A0-width: 2383px;
+  --A0-height: 3370px;
+
+  /* A1 */
+  --A1-width: 1684px;
+  --A1-height: 2383px;
+
+  /* A2 */
+  --A2-width: 1191px;
+  --A2-height: 1684px;
+
+  /* A3 */
+  --A3-width: 842px;
+  --A3-height: 1191px;
+
+  /* A4 */
+  --A4-width: 595px;
+  --A4-height: 842px;
+
+  /* A5 */
+  --A5-width: 420px;
+  --A5-height: 595px;
+
+  /* A6 */
+  --A6-width: 297px;
+  --A6-height: 420px;
+
+  /* A7 */
+  --A7-width: 210px;
+  --A7-height: 297px;
+
+  /* A8 */
+  --A8-width: 148px;
+  --A8-height: 210px;
+
+  /* A9 */
+  --A9-width: 105px;
+  --A9-height: 148px;
+
+  /* A10 */
+  --A10-width: 74px;
+  --A10-height: 105px;
 }

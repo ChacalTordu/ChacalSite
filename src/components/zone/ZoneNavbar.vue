@@ -3,7 +3,7 @@
         <h2 class="title">Chacal site</h2>
         <nav class="navbarItem">
             <h3 class="item"><router-link to="/" class="router-link">ACCUEIL</router-link></h3>
-            <h3 class="item"><router-link to="/" class="router-link">ÉVÉNEMENTS</router-link></h3>
+            <h3 class="item"><router-link to="/events" class="router-link">ÉVÉNEMENTS</router-link></h3>
             <h3 class="item"><router-link to="/" class="router-link">COMPTE</router-link></h3>
         </nav>
     </header>
