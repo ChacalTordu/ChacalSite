@@ -6,8 +6,10 @@
     <section class="joueurs-parent">
       <h2>Tournoi en cours</h2>
       <div class="events">
-        <CardEvent media="" title="Chacal Tournoi" type="Multigaming" date="26/03/2024" location="ChacalDiscord" participantsNb="6"/>
-      </div>
+        <router-link class="router-link" to="/bracket">
+          <CardEvent media="" title="Chacal Tournoi" type="Multigaming" date="26/03/2024" location="ChacalDiscord" participantsNb="6"/>
+        </router-link>
+        </div>
       <h2>Historique tournoi</h2>
       <div class="events">
         <CardEvent media="" title="Tournoi 25k€ prize" type="League Of Legend" date="30/01/2024" location="ChacalDiscord" participantsNb="122"/>
