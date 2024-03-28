@@ -27,6 +27,10 @@ Chaque jeux adoptera un format différent :
 
 Cette interface est développée en utilisant les technologies web telles que JavaScript et CSS pour offrir une expérience conviviale et intuitive aux utilisateurs.
 
+## Information de la V0.1 en dévelopement
+
+Cette première version "beta" marque une première étape de dévelopement. Elle nous permettra de créer facilement un tournoi avec un jeu choisi au hasard parmi une sélection préétablie. Une fois le tournoi lancé, nous pourrons y participer, enregistrer nos scores et finaliser le tableau une fois tous les matchs joués. Tous les détails seront ensuite consultables dans l'historique des événements sur la page "événement".
+
 ## Guide d'installation et de lancement du projet ChacalSite
 
 Ce guide vous aidera à démarrer le projet ChacalSite sur une machine vierge. Assurez-vous d'avoir les privilèges d'administrateur et une connexion Internet active pour effectuer toutes les étapes.
