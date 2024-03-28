@@ -4,8 +4,13 @@
   <main class="blog-section">
     <h1 class="title">Événements</h1>
     <section class="joueurs-parent">
+      <h2>Tournoi en cours</h2>
       <div class="events">
-        <CardEvent media="" title="Chacal Ligue" type="Multigaming" date="26/03/2024" location="ChacalDiscord" participantsNb="6"/>
+        <CardEvent media="" title="Chacal Tournoi" type="Multigaming" date="26/03/2024" location="ChacalDiscord" participantsNb="6"/>
+      </div>
+      <h2>Historique tournoi</h2>
+      <div class="events">
+        <CardEvent media="" title="Tournoi 25k€ prize" type="League Of Legend" date="30/01/2024" location="ChacalDiscord" participantsNb="122"/>
       </div>
       <div class="footer-instance">
         <router-link class="router-link" to="/"><ButtonBlack textButton="Classement"/></router-link>
@@ -47,7 +52,6 @@
   }
   .events {
     align-self: stretch;
-    overflow: hidden;
     flex-shrink: 0;
     display: flex;
     flex-direction: row;

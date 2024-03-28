@@ -26,10 +26,13 @@ body {
   --color-whitesmoke: #f2f2f2;
   --color-black: #000;
   --darkslategraycolor: #333;
+  --border-card: #74747469 ;
 
   /* Gaps */
   --gap-31xl: 50px;
   --gap-3xs: 10px;
+  --gap-4xs: 5px;
+  --gap-5xs: 2px;
   --gap-xl: 20px;
   --gap-base: 16px;
   --gap-51xl: 70px;

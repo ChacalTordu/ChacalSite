@@ -28,9 +28,17 @@
 .cardEvent {
     display: flex;
     flex-direction: column;
-    padding: var(--padding-2xs) var(--padding-3xs);
     box-sizing: border-box;
-    /* gap: var(--gap-xl); */
+    gap: var(--gap-base);
+    background-color: var(--color-white);
+    border-radius: var(--br-xs);
+    border : 1px solid var(--border-card);
+    transition: transform 0.1s ease;
+}
+.cardEvent:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    backface-visibility: hidden;
 }
 .cardImageContainer {
     align-self: stretch;
@@ -42,23 +50,35 @@
 }
 .cardEventDescription {
     width: 100%;
-    background-color: var(--color-white);
     border-radius: var(--br-xs);
+    padding-left: var(--padding-2xs);
+    padding-bottom: var(--padding-2xs);
 }
 .mainDescription {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    padding-bottom: var(--padding-3xs);
+    padding-bottom: var(--padding-sm-5);
 }
 .title {
     font-size: var(--font-size-7xl);
 }
 .type {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
+    font-style: italic;
 }
 .date, .location, .participantsNb {
     display: flex;
     align-items: center;
     font-size: var(--font-size-sm);
+}
+.secondaryDescription {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-4xs);
+}
+span {
+    padding-left: var(--padding-7xs-5);
 }
 .description {
     margin: 0;
